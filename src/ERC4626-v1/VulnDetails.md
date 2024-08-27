@@ -4,7 +4,7 @@
 
 The `VulnerableVault` contract is an implementation of the ERC4626 tokenized vault standard. It allows users to deposit an underlying asset in exchange for shares, and later redeem those shares for the underlying asset.
 
-## Identified Vulnerabilities
+## Vulnerabilities
 
 ### 1. Rounding Error Exploitation
 
