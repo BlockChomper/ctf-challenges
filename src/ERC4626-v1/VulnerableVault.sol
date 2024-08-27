@@ -70,7 +70,6 @@ contract VulnerableVault is ERC20, IERC4626 {
 
     function donateAssets(uint256 amount) public {
         _asset.safeTransferFrom(msg.sender, address(this), amount);
-        // Deliberately not minting any shares for donated assets
     }
 
      function convertToAssets(uint256 shares) public view virtual override returns (uint256) {
@@ -78,7 +77,6 @@ contract VulnerableVault is ERC20, IERC4626 {
         if (supply == 0) {
             return shares;
         }
-        // Vulnerable implementation: artificially inflates asset value of shares
         return (shares * totalAssets() * 100) / supply;
     }
 
