@@ -4,6 +4,6 @@
 
 ## Documentation
 
-[https://book.getfoundry.sh/](https://www.rareskills.io/uniswap-v2-book)
+[Uniswap V2 Book](https://www.rareskills.io/uniswap-v2-book)
 
 
