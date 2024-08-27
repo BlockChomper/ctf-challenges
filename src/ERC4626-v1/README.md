@@ -10,8 +10,8 @@ Your mission, should you choose to accept it, is to ethically exploit the vulner
 
 ## Objectives
 1. Exploit the vulnerability in the VulnerableVault contract.
-2. Extract more than 10,000 tokens for yourself (the player).
-3. Leave less than 1,000 tokens in the vault.
+2. Player should have gained more than 100 tokens.
+3. Vault should have lost more than 100 tokens.
 4. Complete the exploit in a single transaction (within the `testExploit` function).
 
 ## Resources at Your Disposal
