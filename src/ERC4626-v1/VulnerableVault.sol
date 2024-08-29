@@ -37,17 +37,18 @@ contract VulnerableVault is ERC20, IERC4626 {
     }
 
     function withdraw(uint256 assets, address receiver, address owner) public virtual override returns (uint256 shares) {
-    shares = balanceOf(owner);
-    uint256 actualAssets = convertToAssets(shares);
-    if (assets < actualAssets) {
-        actualAssets = assets;
-        shares = convertToShares(actualAssets);
+
+        shares = balanceOf(owner);
+        uint256 actualAssets = convertToAssets(shares);
+        if (assets < actualAssets) {
+            actualAssets = assets;
+            shares = convertToShares(actualAssets);
+        }
+        _burn(owner, shares);
+        _asset.safeTransfer(receiver, actualAssets);
+        emit Withdraw(msg.sender, receiver, owner, actualAssets, shares);
+        return shares;
     }
-    _burn(owner, shares);
-    _asset.safeTransfer(receiver, actualAssets);
-    emit Withdraw(msg.sender, receiver, owner, actualAssets, shares);
-    return shares;
-}
 
     function redeem(uint256 shares, address receiver, address owner) public virtual override returns (uint256 assets) {
         if (msg.sender != owner) {
