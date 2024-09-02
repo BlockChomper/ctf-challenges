@@ -31,5 +31,5 @@ forge build
 
 Run exploit test to confirm successful completion of challenge 
 ```jsx
-forge test --match-test ...
+forge test --match-test testExploit
 ```
