@@ -6,4 +6,6 @@
 
 [Uniswap V2 Book](https://www.rareskills.io/uniswap-v2-book)
 
+## Challenges
 
+[Chapter 1: ERC4626 - Vulnerable Vault](https://github.com/BlockChomper/ctf-challenges/tree/master/src/ERC4626-v1)
