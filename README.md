@@ -18,7 +18,7 @@
 git clone https://github.com/BlockChomper/ctf-challenges.git
 ```
 
-Ensure you have Foundry installed with `foundryup` and then build the repe after cloning from Github
+Ensure you have Foundry installed with `foundryup` and then build the repo after cloning from Github
 
 ```jsx
 forge build
