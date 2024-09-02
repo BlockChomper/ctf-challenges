@@ -24,10 +24,10 @@ Ensure you have Foundry installed with `foundryup` and then build the repe after
 forge build
 ```
 
-Select challenge from sub folder within SRC. 
-View associated readme.md for scenario details. 
-Analyse vulnerable contract.
-Write exploit code within matching test file for vulnerable contract.
+- Select challenge from sub folder within SRC. 
+- View associated readme.md for scenario details. 
+- Analyse vulnerable contract.
+- Write exploit code within matching test file for vulnerable contract.
 
 Run exploit test to confirm successful completion of challenge 
 ```jsx
