@@ -10,7 +10,7 @@ Your mission, should you choose to accept it, is to ethically exploit the vulner
 
 ## Objectives
 1. Exploit the vulnerability in the VulnerableVault contract.
-2. Player should have gained more than 100 tokens.
+2. Player should have gained more than 100 tokens (the token has 18 decimals).
 3. Vault should have lost more than 100 tokens.
 4. Complete the exploit in a single transaction (within the `testExploit` function).
 
@@ -23,6 +23,7 @@ Your mission, should you choose to accept it, is to ethically exploit the vulner
 - You must work within the confines of the Ethereum Virtual Machine (EVM).
 - You cannot modify the VulnerableVault contract itself.
 - Your exploit must be executed through interactions with the vault's public interface.
+- You may only use the `player` address in the test, you may not prank other addresses.
 
 ## Hints
 - Pay close attention to the implementation of the deposit and withdraw functions.
