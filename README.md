@@ -8,4 +8,4 @@
 
 ## Challenges
 
-[Uniswap Book Chapter 1: ERC4626 - Vulnerable Vault](https://github.com/BlockChomper/ctf-challenges/tree/master/src/ERC4626-v1)
+[Uniswap V2 Book Chapter 1: ERC4626 - Vulnerable Vault](https://github.com/BlockChomper/ctf-challenges/tree/master/src/ERC4626-v1)
