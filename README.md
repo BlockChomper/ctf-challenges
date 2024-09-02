@@ -1,4 +1,4 @@
-![Untitled](https://imgur.com/EvzXMnq)
+!![Block logo](https://imgur.com/EvzXMnq.png)
 
 ## Rareskills Inspired CTF Challenges
 
