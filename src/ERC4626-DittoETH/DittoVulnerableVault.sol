@@ -27,15 +27,15 @@ contract DittoVulnerableVault {
     // Simulate a discounted trade
     function executeTrade(uint256 tradeAmount) external {
         require(tradeAmount <= DISCOUNT_THRESHOLD, "Trade too large");
-        
+
         // Calculate fee based on total supply, not just the trade amount
         uint256 fee = (totalSupply * DISCOUNT_FEE_PERCENTAGE) / 100;
-        
+
         // Mint new tokens as fee and add to total supply
         totalSupply += fee;
-        
+
         // Distribute fee proportionally to all users
-        for (uint i = 0; i < 5; i++) {
+        for (uint256 i = 0; i < 5; i++) {
             address user = address(uint160(i + 1)); // Simplified user addresses
             uint256 userShare = (fee * balances[user]) / totalSupply;
             balances[user] += userShare;
