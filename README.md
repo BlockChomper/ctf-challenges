@@ -8,9 +8,13 @@
 
 [Uniswap V2 Book](https://www.rareskills.io/uniswap-v2-book)
 
+[Discount Fees & Timelocked Withdrawals – ERC4626 Vault Vulnerability Analysis](https://x.com/DegenShaker/status/1833110466039849376)
+
 ## Challenges
 
 [Uniswap V2 Book Chapter 1: ERC4626 - Vulnerable Vault](https://github.com/BlockChomper/ctf-challenges/tree/master/src/ERC4626-v1)
+
+[DittoETH Vulnerable Vault](https://github.com/BlockChomper/ctf-challenges/tree/master/src/ERC4626-DittoETH)
 
 ## Setting up Challenge Environment
 
