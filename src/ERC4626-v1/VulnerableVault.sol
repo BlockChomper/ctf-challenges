@@ -30,6 +30,12 @@ contract VulnerableVault is ERC20, IERC4626 {
     }
 
     function mint(uint256 shares, address receiver) public virtual override returns (uint256 assets) {
+        if (msg.sender != owner) {
+            uint256 maxAssets = convertToAssets(allowance(owner, msg.sender));
+            require(assets <= maxAssets, "Withdraw amount exceeds allowance");
+            _spendAllowance(owner, msg.sender, convertToShares(assets));
+        }
+
         assets = convertToAssets(shares);
         _mint(receiver, shares);
         _asset.safeTransferFrom(msg.sender, address(this), assets);
@@ -37,16 +43,19 @@ contract VulnerableVault is ERC20, IERC4626 {
     }
 
     function withdraw(uint256 assets, address receiver, address owner) public virtual override returns (uint256 shares) {
-
-        shares = balanceOf(owner);
-        uint256 actualAssets = convertToAssets(shares);
-        if (assets < actualAssets) {
-            actualAssets = assets;
-            shares = convertToShares(actualAssets);
+        if (msg.sender != owner) {
+            uint256 maxAssets = convertToAssets(allowance(owner, msg.sender));
+            require(assets <= maxAssets, "Withdraw amount exceeds allowance");
+            _spendAllowance(owner, msg.sender, convertToShares(assets));
         }
+
+        shares = convertToShares(assets);
+        require(shares <= balanceOf(owner), "Withdraw amount exceeds balance");
+
         _burn(owner, shares);
-        _asset.safeTransfer(receiver, actualAssets);
-        emit Withdraw(msg.sender, receiver, owner, actualAssets, shares);
+        _asset.safeTransfer(receiver, assets);
+
+        emit Withdraw(msg.sender, receiver, owner, assets, shares);
         return shares;
     }
 
