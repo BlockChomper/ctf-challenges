@@ -16,6 +16,8 @@
 
 [DittoETH Vulnerable Vault](https://github.com/BlockChomper/ctf-challenges/tree/master/src/ERC4626-DittoETH)
 
+[MysteryMasks Challenge](https://github.com/BlockChomper/ctf-challenges/tree/master/src/ERC721-v1)
+
 ## Setting up Challenge Environment
 
 ```jsx
