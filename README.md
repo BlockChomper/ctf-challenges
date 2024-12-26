@@ -10,6 +10,8 @@
 
 [Discount Fees & Timelocked Withdrawals – ERC4626 Vault Vulnerability Analysis](https://x.com/DegenShaker/status/1833110466039849376)
 
+[ERC721 Callback Solution, Samczsun's Dangers of Suprising Code](https://samczsun.com/the-dangers-of-surprising-code/)
+
 ## Challenges
 
 [Uniswap V2 Book Chapter 1: ERC4626 - Vulnerable Vault](https://github.com/BlockChomper/ctf-challenges/tree/master/src/ERC4626-v1)
