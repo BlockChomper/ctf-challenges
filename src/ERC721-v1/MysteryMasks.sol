@@ -24,14 +24,15 @@ contract MysteryMasks is ERC721, Ownable {
         require(_nextTokenId + numberOfMasks <= MAX_NFT_SUPPLY, "Would exceed max supply");
         
         for(uint256 i = 0; i < numberOfMasks; i++) {
-            uint256 newTokenId = _nextTokenId + 1;
-            
-            // Randomly assign special powers
-            if(block.timestamp % 2 == 0) {
-                hasSpecialPower[newTokenId] = true;
-            }
-            
-            _safeMint(msg.sender, newTokenId);
+        _nextTokenId++;  // Increment first
+        uint256 newTokenId = _nextTokenId;
+        
+        // Randomly assign special powers
+        if(block.timestamp % 2 == 0) {
+            hasSpecialPower[newTokenId] = true;
+        }
+        
+        _safeMint(msg.sender, newTokenId);
         }
     }
     
